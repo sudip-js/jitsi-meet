@@ -8,14 +8,16 @@ import {
   Dashboard,
   DID,
   Meeting,
+  ScheduleMeeting,
   Setting,
   Video,
 } from "../pages";
 import { PrivateLayout } from "../layouts";
+import MeetingLayout from "../layouts/meeting";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/jitsi-meet",
     element: (
       <PrivateRoutes>
         <PrivateLayout />
@@ -55,18 +57,22 @@ export const router = createBrowserRouter([
         path: "setting",
         element: <Setting />,
       },
+      {
+        path: "schedule-meeting",
+        element: <ScheduleMeeting />,
+      },
     ],
   },
   {
-    path: "/meeting",
+    path: "/jitsi-meet",
     element: (
       <PrivateRoutes>
-        <PrivateLayout />
+        <MeetingLayout />
       </PrivateRoutes>
     ),
     children: [
       {
-        index: true,
+        path: "meeting/:id",
         element: <Meeting />,
       },
     ],

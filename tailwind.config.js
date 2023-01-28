@@ -10,6 +10,8 @@ module.exports = {
         white: "#fafafa",
         sidebarIcon: "#575b62",
         headerBtn: "#202225",
+        headerBtnActive: "#228be6",
+        error: "#fa5252",
       },
     },
   },

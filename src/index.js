@@ -1,11 +1,13 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import FullScreenSpinner from "./components/spinner/FullScreenSpinner";
 import "./index.css";
+
+const App = lazy(() => import("./App"));
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <Suspense fallback={<FullScreenSpinner loadingMessage="Loading..." />}>
     <App />
-  </React.StrictMode>
+  </Suspense>
 );

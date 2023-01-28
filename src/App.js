@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router-dom";
 import { MantineProvider } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
 import { JoinMeeting } from "./pages";
+import { Dialler } from "./components";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
       <ModalsProvider
         modals={{
           joinMeeting: JoinMeeting,
+          dialler: Dialler,
         }}
       >
         <RouterProvider router={router} />

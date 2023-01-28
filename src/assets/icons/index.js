@@ -13,7 +13,11 @@ export {
   MdCheck as CheckIcon,
   MdClose as CloseIcon,
   MdKeyboard as JoinMeetingIcon,
+  MdDialpad as DialpadIcon,
 } from "react-icons/md";
 export { FiUser as UserIcon, FiUserPlus as UserPlusIcon } from "react-icons/fi";
-export { AiOutlineBars as DIDIcon } from "react-icons/ai";
+export {
+  AiOutlineBars as DIDIcon,
+  AiOutlineMinus as MinimizeIcon,
+} from "react-icons/ai";
 export { TbSettings as SettingsIcon } from "react-icons/tb";

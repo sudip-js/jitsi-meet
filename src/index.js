@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import FullScreenSpinner from "./components/spinner/FullScreenSpinner";
-import "./index.css";
+import "./styles/index.scss";
 
 const App = lazy(() => import("./App"));
 

@@ -1,7 +1,7 @@
 import React from "react";
 
-const JoinMeeting = ({ innerProps }) => {
+const Dialler = ({ innerProps }) => {
   return <div>{innerProps.modalBody}</div>;
 };
 
-export default JoinMeeting;
+export default Dialler;

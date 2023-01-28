@@ -1,8 +1,10 @@
 import { Button } from "@mantine/core";
+import { openContextModal } from "@mantine/modals";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CalendarIcon, HeadphonesIcon, UserPlusIcon } from "../../assets/icons";
 import FullScreenSpinner from "../../components/spinner/FullScreenSpinner";
+import JoinMeetingForm from "../../pages/meeting/joinMeeting/JoinMeetingForm";
 
 const METTING_PATH = "meeting";
 const generateMeetingUUID = () => {
@@ -36,13 +38,32 @@ const DashboardHeader = () => {
   };
   const handleJoinMeeting = () => {
     console.log("handleJoinMeeting");
+
+    openContextModal({
+      modal: "joinMeeting",
+      centered: true,
+      title: "Join Meeting",
+      closeOnClickOutside: false,
+      innerProps: {
+        modalBody: <JoinMeetingForm />,
+      },
+      sx: (theme) => ({
+        ".mantine-Modal-modal": {
+          width: "430px",
+          backgroundColor: "black",
+          ".mantine-Modal-header": {
+            color: theme.colors.white,
+          },
+        },
+      }),
+    });
   };
   const RenderButton = ({ Icon, label, ...rest }) => {
     return (
       <Button
         {...rest}
         leftIcon={<Icon className="w-5 h-5 cursor-pointer text-white " />}
-        className=" hover:text-white"
+        className="bg-sidebar hover:bg-headerBtnActive"
       >
         {label}
       </Button>

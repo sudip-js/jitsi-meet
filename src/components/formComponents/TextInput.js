@@ -21,14 +21,12 @@ const TextInput = forwardRef(({ label, placeholder, error, ...rest }, ref) => {
             border: `2px solid #fa5252`,
           },
           height: "3rem",
-          // border: `2px solid ${theme.colors.blue}`,
           border: "none",
           backgroundColor: theme.colors.darkGrey,
           fontWeight: "400",
           color: theme.colors.white,
 
           "&:focus,&:focus-within": {
-            // boxShadow: `0 0 0 0.1rem ${theme.colors.blue}`,
             border: `1px solid ${theme.colors.blue}`,
           },
         },

@@ -12,6 +12,7 @@ export {
   MdCall as CallIcon,
   MdCheck as CheckIcon,
   MdClose as CloseIcon,
+  MdKeyboard as JoinMeetingIcon,
 } from "react-icons/md";
 export { FiUser as UserIcon, FiUserPlus as UserPlusIcon } from "react-icons/fi";
 export { AiOutlineBars as DIDIcon } from "react-icons/ai";

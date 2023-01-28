@@ -1,12 +1,17 @@
 import React from "react";
 import { Button as MantineButton } from "@mantine/core";
-const Button = ({ children, ...rest }) => {
+const Button = ({
+  children,
+  className = "bg-sidebar",
+  loading = false,
+  ...rest
+}) => {
   return (
     <MantineButton
       {...rest}
-      // loading={true}
+      loading={loading}
       // loaderPosition="right"
-      className="bg-sidebar"
+      className={className}
       styles={(theme) => ({
         root: {
           border: 0,

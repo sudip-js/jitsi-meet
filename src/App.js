@@ -2,6 +2,8 @@ import React from "react";
 import { router } from "./routers";
 import { RouterProvider } from "react-router-dom";
 import { MantineProvider } from "@mantine/core";
+import { ModalsProvider } from "@mantine/modals";
+import { JoinMeeting } from "./pages";
 
 const App = () => {
   return (
@@ -19,7 +21,13 @@ const App = () => {
         },
       }}
     >
-      <RouterProvider router={router} />
+      <ModalsProvider
+        modals={{
+          joinMeeting: JoinMeeting,
+        }}
+      >
+        <RouterProvider router={router} />
+      </ModalsProvider>
     </MantineProvider>
   );
 };

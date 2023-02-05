@@ -14,6 +14,7 @@ export {
   MdClose as CloseIcon,
   MdKeyboard as JoinMeetingIcon,
   MdDialpad as DialpadIcon,
+  MdChat as ChatIconOne,
 } from "react-icons/md";
 export { FiUser as UserIcon, FiUserPlus as UserPlusIcon } from "react-icons/fi";
 export {
@@ -22,6 +23,7 @@ export {
   AiFillEye as ShowPassword,
   AiFillEyeInvisible as HidePassword,
   AiFillFileImage as FileIcon,
+  AiOutlinePlus as PlusIcon,
 } from "react-icons/ai";
 export { TbSettings as SettingsIcon } from "react-icons/tb";
 export { RiLogoutCircleRLine as LogoutIcon } from "react-icons/ri";

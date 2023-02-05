@@ -9,7 +9,7 @@ import { ProfilePic } from "../../../../assets/images";
 
 const ChatHeader = () => {
   return (
-    <header className="flex items-center justify-between py-2 px-4">
+    <header className="flex items-center justify-between px-5 h-[4rem] sticky top-0 bg-sidebar">
       <div className="flex items-center gap-2">
         <div className="border-[2px] border-solid border-headerBtnActive w-fit rounded-full">
           <img

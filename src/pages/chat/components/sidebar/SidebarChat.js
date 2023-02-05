@@ -2,7 +2,7 @@ import React from "react";
 const SidebarChat = ({ data }) => {
   const { profileImage, username, message } = data;
   return (
-    <section className="flex items-center gap-2">
+    <section className="flex items-center gap-2 cursor-pointer">
       <div className="border-[2px] border-solid border-[#2CCE5D] w-fit rounded-full">
         <img
           src={profileImage}

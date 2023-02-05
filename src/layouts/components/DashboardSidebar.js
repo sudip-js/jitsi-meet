@@ -1,3 +1,4 @@
+import { signOut } from "firebase/auth";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import {
@@ -7,11 +8,13 @@ import {
   DashboardIcon,
   DIDIcon,
   Logo,
+  LogoutIcon,
   SettingsIcon,
   UserIcon,
   VideoIcon,
 } from "../../assets/icons";
 import MantineTooltip from "../../components/tooltip";
+import { auth } from "../../config/firebase";
 
 const links = [
   {
@@ -55,9 +58,16 @@ const links = [
     Icon: SettingsIcon,
   },
 ];
+const activeClassName = "text-white";
 
 const DashboardSidebar = () => {
-  const activeClassName = "text-white";
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.log("LOGOUT ERROR:", error);
+    }
+  };
   return (
     <div className="min-w-[4rem] h-[100vh] bg-sidebar flex flex-col items-center gap-8 py-2">
       <Logo className="w-10 h-10 text-white cursor-pointer" />
@@ -78,6 +88,11 @@ const DashboardSidebar = () => {
             ))
           : null}
       </div>
+      <MantineTooltip key="logout" label="logout" position="right">
+        <span onClick={() => handleLogout()}>
+          <LogoutIcon className="w-7 h-7 text-white cursor-pointer" />
+        </span>
+      </MantineTooltip>
     </div>
   );
 };

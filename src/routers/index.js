@@ -7,15 +7,37 @@ import {
   Contact,
   Dashboard,
   DID,
+  Login,
   Meeting,
   ScheduleMeeting,
   Setting,
+  Signup,
   Video,
 } from "../pages";
-import { PrivateLayout } from "../layouts";
+import { PrivateLayout, PublicLayout } from "../layouts";
 import MeetingLayout from "../layouts/meeting";
+import PublicRoutes from "./PublicRoutes";
 
 export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <PublicRoutes>
+        <PublicLayout />
+      </PublicRoutes>
+    ),
+    children: [
+      {
+        index: true,
+        element: <Login />,
+      },
+      {
+        path: "signup",
+        element: <Signup />,
+      },
+    ],
+  },
+
   {
     path: "/jitsi-meet",
     element: (

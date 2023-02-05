@@ -9,3 +9,5 @@ export { default as Setting } from "./setting";
 export { default as Meeting } from "./meeting";
 export { default as ScheduleMeeting } from "./meeting/scheduleMeeting";
 export { default as JoinMeeting } from "./meeting/joinMeeting";
+export { default as Login } from "./login";
+export { default as Signup } from "./signup";

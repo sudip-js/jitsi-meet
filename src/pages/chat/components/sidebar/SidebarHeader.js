@@ -1,5 +1,5 @@
 import React from "react";
-import { PlusIcon } from "../../../assets/icons";
+import { PlusIcon } from "../../../../assets/icons";
 
 const SidebarHeader = ({ chatHeader }) => {
   const { label, Icon, cta } = chatHeader;

@@ -1,9 +1,9 @@
 import React from "react";
-import { ChatIconOne } from "../../../assets/icons";
+import { ChatIconOne } from "../../../../assets/icons";
 
 import SidebarChat from "./SidebarChat";
 import SidebarHeader from "./SidebarHeader";
-import { ProfilePic } from "../../../assets/images";
+import { ProfilePic } from "../../../../assets/images";
 
 const Sidebar = () => {
   const chatHeader = {

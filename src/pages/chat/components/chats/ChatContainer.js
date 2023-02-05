@@ -1,7 +1,7 @@
 import React from "react";
 
 const ChatContainer = () => {
-  return <div className="bg-[#36393E]">ChatContainer</div>;
+  return <div>ChatContainer</div>;
 };
 
 export default ChatContainer;

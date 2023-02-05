@@ -24,10 +24,12 @@ export {
   AiFillEyeInvisible as HidePassword,
   AiFillFileImage as FileIcon,
   AiOutlinePlus as PlusIcon,
+  AiOutlineSearch as SearchIcon,
 } from "react-icons/ai";
 export { TbSettings as SettingsIcon } from "react-icons/tb";
 export { RiLogoutCircleRLine as LogoutIcon } from "react-icons/ri";
 export {
   HiOutlineMail as EmailIcon,
   HiOutlineLockClosed as PasswordIcon,
+  HiOutlineDotsVertical as VerticalDotsIcon,
 } from "react-icons/hi";
